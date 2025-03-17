@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>R - 标签 - 数屋</title><link>https://dehongwan.github.io/zh-cn/tags/r/</link><description>数屋</description><generator>Hugo 0.145.0 &amp; FixIt v0.3.17-8212d6fd</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 26 Jan 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://dehongwan.github.io/zh-cn/tags/r/index.xml" rel="self" type="application/rss+xml"/><item><title>R数据结构</title><link>https://dehongwan.github.io/zh-cn/posts/r%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</link><pubDate>Fri, 26 Jan 2018 00:00:00 +0000</pubDate><guid>https://dehongwan.github.io/zh-cn/posts/r%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</guid><category domain="https://dehongwan.github.io/zh-cn/categories/r/">R</category><description>&lt;h3 id="向量" class="heading-element">&lt;span>向量&lt;/span>
+ &lt;a href="#%e5%90%91%e9%87%8f" class="heading-mark">
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
+ &lt;/a>
+&lt;/h3>&lt;ul>
+&lt;li>作用：存储数值型、字符型、逻辑型数据的一维数组;&lt;/li>
+&lt;li>生成：函数 c(),seq()生成等差数列，还可以用运算符创建向量（a:b）；seq(from=,to=,by=,length=)&lt;/li>
+&lt;li>查找：向量+[],[]确定位置，可以用c()定义位置&lt;/li>
+&lt;li>筛选：在[]中定义关于向量的条件，eg: c[c*c&amp;gt;m]，或者用函数subset(),eg:subset(c,c的条件)&lt;/li>
+&lt;li>相关函数：all()全为真时返回真，any()：至少有一个为真返回真；length():向量长度&lt;/li>
+&lt;li>测试向量是否相等：all(x==y)或者用函数identical(x,y)&lt;/li>
+&lt;/ul>
+&lt;h3 id="矩阵" class="heading-element">&lt;span>矩阵&lt;/span>
+ &lt;a href="#%e7%9f%a9%e9%98%b5" class="heading-mark">
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
+ &lt;/a>
+&lt;/h3>&lt;ul>
+&lt;li>描述：R中矩阵是指定行数和列数的二维数组，矩阵中的元素类型必须一致即数值、字符、逻辑，用函数matrix创建；&lt;/li>
+&lt;li>matrix: matrix(data = NA, nrow = 1, ncol = 1, byrow = FALSE,
+dimnames = list(rnames,cnames))&lt;/li>
+&lt;li>矩阵下标：用&lt;a href="a%e8%a1%8c%ef%bc%8cb%e5%88%97">a,b&lt;/a>确定元素，a或b可由c()代替来定义部分元素；&lt;/li>
+&lt;li>矩阵的运算：%*% 乘法符号，加减不变，星号：数乘；&lt;/li>
+&lt;li>矩阵索引：类似向量，不同在于矩阵是二维的，除行列外还可索引行列中的元素，eg:m[a,c(b,c)]表示矩阵m中a行从b到c的元素；
+矩阵中元素筛选：条件定义类似向量。再结合索引；&lt;/li>
+&lt;li>调用行和列的函数：apply(m,dimcod,f,fargs),m:矩阵，dimcod维度编号（1行2列）,f：调用的函数,fargs：可选参数集；eg:对矩阵每列应用mean(),apply(m,2,mean)&lt;/li>
+&lt;/ul>
+&lt;h3 id="数据框" class="heading-element">&lt;span>数据框&lt;/span>
+ &lt;a href="#%e6%95%b0%e6%8d%ae%e6%a1%86" class="heading-mark">
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
+ &lt;/a>
+&lt;/h3>&lt;ul>
+&lt;li>描述：类似于矩阵，不同在于每列可以是不同类型的数据；因此应用广泛，由data.frame创建；&lt;/li>
+&lt;li>索引：用符号$（列表中也是）;&lt;/li>
+&lt;/ul>
+&lt;h3 id="因子不太熟" class="heading-element">&lt;span>因子（不太熟）&lt;/span>
+ &lt;a href="#%e5%9b%a0%e5%ad%90%e4%b8%8d%e5%a4%aa%e7%86%9f" class="heading-mark">
+ &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">&lt;/path>&lt;/svg>
+ &lt;/a>
+&lt;/h3>&lt;ul>
+&lt;li>
+&lt;p>描述：类别变量和有序类别变量在R中称为因子，factor以一个整数向量的形式存储类别值，整数的取值是1-k，k是类别变量中唯一值得个数，同时将一个由字符串（原始值）组成的内部向量映射到这些整数上。eg:c&amp;lt;-c(T1,T2,T1,T1),factor(c)=(1,2,1,1);加入参数oder=true,给定水平所对应的值会按一定顺序排列。（str()显示对象结构，summary()显示对象统计概要）&lt;/p></description></item></channel></rss>
